@@ -12,7 +12,7 @@ openssl rsautl -decrypt -inkey choompol.pem -in message.enc
 openssl dgst -sha1 -sign choompol.pem -out sha1.sign message.txt
 openssl dgst -sha1 -verify choompol.pub -signature sha1.sign message.txt
 
-ssh-keygen -i -m PKCS8 -f choompol.pem
+ssh-keygen -i -m PKCS8 -f choompol.pub
 
 https://medium.com/@bn121rajesh/rsa-sign-and-verify-using-openssl-behind-the-scene-bf3cac0aade2
 https://opensource.com/article/21/4/encryption-decryption-openssl
